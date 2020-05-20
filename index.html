@@ -12,17 +12,18 @@
   <body>
     <div class="container"> 
       <h2>Welcome to Mr. Roboger's Neighborhood!</h2>
+
       <form id="inputForm">
-        <p>Would you like to sing a song? </p>    
+        <h4>Would you like to sing a song? </h4>    
 
         <div class="form-group" id="name">
-          <label for="userName">What's your name, neighbor?</label>
+          <label for="userName">Tell me your name, neighbor:</label>
           <input id="userName" class="form-control" type="text">
         </div>
 
-        <div class="form-group">
-          <label for="inputNumber">Please enter a number: </label>
-          <input id="inputNumber" class="form-control" type="number">
+        <div class="form-group" id="number">
+          <label for="inputNumber">Enter a number: </label>
+          <input id="inputNumber" class="form-control" type="text">
         </div>
 
         <button type="submit" class="btn">Click here to turn your number into a Robot Roger song...</button>
@@ -30,9 +31,9 @@
       </form>
 
       <div id="results">
-        <h3><span class="robogerResult"> </span></h3>
-        <h4><span class="userName"></span> Let's be Neighbors.</h4>
-        
+        <h3><span class="robogerResults">**</span></h3>
+        <h4><span class="userName"></span>, Let's be Neighbors.</h4>
+      </div>
 
 
     </div>
