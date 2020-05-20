@@ -1,25 +1,40 @@
 // user logic
-// const robogerArray = function(inputtedNumber) {
-// let functionArray= [];
-//   for (let i=0; i<=inputtedNumber; i+=1) {
-//     // functionArray.push(i);
-//     }
+let endArray = [];
+const robogerArray = function(inputtedNumber, inputName) {
+  let functionArray= [];
+  let midArray= [0];
+  let three = /3/g;
+  let two = /2/g;
+  let one = /1/g;
 
-//   for (let index = 0; index < functionArray.length; index +=1) {
-// //  if (inputtedNumber%3 === 0 ) {
-// //   endArray.push ("Won't you be my neighbor, userName?"); 
-// //    }
-//     if (functionArray[i].includes('3')) {
-//       functionArray[i].replace ("Won't you be my neighbor?")
-//       }
-//     else if (functionArray[i].includes('2')) {
-//       functionArray[i].replace ("Boop!")
-//       }
-//     else if (functionArray[i].includes('1')) {
-//       functionArray[i].replace ("Beep!")
-//       }
-// return functionArray;
-// }
+  for (let i=0; i<=inputtedNumber; i+=1) {
+    functionArray.push(i);
+    }
+
+  for (let i=1; i<=inputtedNumber; i+=1) {
+    if (functionArray[i]%3 === 0) {
+      midArray.push ("Won't you be my neighbor, " + inputName + "?"); 
+      }
+      // // else if (functionArray[i] === three ) {
+      // //   endArray.push ("Won't you be my neighbor?");
+      // //   }
+      //   else if (functionArray[i] === two ) {
+      //     endArray.push ("Boop!");
+      //     }
+      //   //   else if (functionArray[i]===(one)) {
+      //   //     midArray.push ("Beep!");
+      //   //     }
+  else {
+        midArray.push(i);
+      }
+
+  const convertToString = midArray.toString();
+  const threeString = (convertToString.replace(three, "Won't you be my neighbor?"));
+  const twoString = (threeString.replace(two, "Boop!"));
+  endArray = (twoString.replace(one, "Beep!"));
+}
+return endArray;
+};
 
 // business logic
 $(document).ready(function() {
@@ -27,19 +42,14 @@ $(document).ready(function() {
     event.preventDefault();
 
     const inputName = $("#userName").val();
-    // const inputName = $("input#userName").val();
     $(".userName").text(inputName).val();
 
     const inputtedNumber = parseInt($("#inputNumber").val());
-    // const inputtedNumber = $("input#inputNumber").val();
-    alert(inputtedNumber);
     
-    // const returnedArray = robogerArray(inputtedNumber);
-    // const finalArray = returnedArray.toString;
-    //  $(".roborgerResults").text(finalArray);
-
-    // $(".inputNumber").number(inputtedNumber).val();
-    // alert("inputtedNumber");
+    const returnedArray = robogerArray(inputtedNumber, inputName);
+    const finalString = returnedArray.toString();
+     $(".finalString").text(finalString).val();    
+     alert(finalString);
 
     $("#results").show();
     $("#name").hide();
