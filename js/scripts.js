@@ -52,10 +52,15 @@ $(document).ready(function() {
     const inputtedNumber = parseInt($("#inputNumber").val());
 
     const returnedArray = robogerArray(inputtedNumber, inputName);
-    const finalString = returnedArray.toString();
-     $(".finalString").text(finalString).val();
+    $(".returnedArray").text(returnedArray).val();
 
     $("#results").show();
     $("#name").hide();
+    $("#reverseButton").show();
+
+    // $("#reverseButton").click(function(){
+    //   let reverseArray= returnedArray.reverse;
+    //   $(".reverseArray").text(reverseArray).val();
+    // });
   });
 });

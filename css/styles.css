@@ -6,6 +6,13 @@ label {
   padding: 5px;
 }
 
+/* .container {
+  background: url("../img/mrRogersTrolley.jpg");
+  background-repeat:no-repeat;  
+} */
+
 #results{
   display: none;
+  /* background: url("../img/mrRogersKitten.jpg");
+  background-repeat: space;   */
 }
