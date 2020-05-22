@@ -44,6 +44,7 @@ return endArray;
 // business logic
 $(document).ready(function() {
   $("#inputForm").submit(function(event){
+ 
     event.preventDefault();
 
     const inputName = $("#userName").val();
@@ -54,7 +55,8 @@ $(document).ready(function() {
     const returnedArray = robogerArray(inputtedNumber, inputName);
     $(".returnedArray").text(returnedArray).val();
 
-    $("#results").show();
+    $("#results").show(); 
+    $("#myform")[0].reset();
     $("#name").hide();
     $("#reverseButton").show();
 
@@ -63,4 +65,8 @@ $(document).ready(function() {
     //   $(".reverseArray").text(reverseArray).val();
     // });
   });
+      $("#reverseButton").click(function(){
+      let reverseArray= returnedArray.reverse;
+      $(".reverseArray").text(reverseArray).val();
+    });
 });

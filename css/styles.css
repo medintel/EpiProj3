@@ -2,17 +2,29 @@
   border: 3px red solid;
 }
 
+input[type=text] {
+  width: 20%;
+}
+
 label {
   padding: 5px;
 }
 
-/* .container {
-  background: url("../img/mrRogersTrolley.jpg");
-  background-repeat:no-repeat;  
-} */
-
 #results{
   display: none;
-  /* background: url("../img/mrRogersKitten.jpg");
-  background-repeat: space;   */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50%;
+  text-decoration-color: black;
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image:url("../img/mister-rogers-sweater.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 50%;
 }
