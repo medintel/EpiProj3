@@ -1,5 +1,5 @@
 
-// user logic
+// User Logic
 let endArray = [];
 const robogerArray = function(inputtedNumber, inputName) {
   let midArray = [0];
@@ -41,7 +41,7 @@ return endArray;
 };
 
 
-// business logic
+// Business Logic
 $(document).ready(function() {
   $("#inputForm").submit(function(event){
  
@@ -56,17 +56,8 @@ $(document).ready(function() {
     $(".returnedArray").text(returnedArray).val();
 
     $("#results").show(); 
-    $("#myform")[0].reset();
     $("#name").hide();
-    $("#reverseButton").show();
 
-    // $("#reverseButton").click(function(){
-    //   let reverseArray= returnedArray.reverse;
-    //   $(".reverseArray").text(reverseArray).val();
-    // });
   });
-      $("#reverseButton").click(function(){
-      let reverseArray= returnedArray.reverse;
-      $(".reverseArray").text(reverseArray).val();
-    });
+
 });
